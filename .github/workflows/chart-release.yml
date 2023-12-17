@@ -1,0 +1,25 @@
+name: Release Charts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Publish Helm chart
+        uses: TheLandGame/helm-gh-pages@master
+        with:
+          charts_url: https://lumiterracommunity.github.io/charts/
+          repository: charts
+          target_dir: dapr-components
+          branch: gh-pages
+          charts_dir: dapr-charts
+          token: ${{ secrets.BOT_GITHUB_TOKEN }}

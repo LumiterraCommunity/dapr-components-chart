@@ -1,0 +1,12 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: consul
+spec:
+  type: state.consul
+  version: v1
+  metadata:
+  - name: datacenter
+    value: dc1
+  - name: httpAddr
+    value: consul-server.consul
