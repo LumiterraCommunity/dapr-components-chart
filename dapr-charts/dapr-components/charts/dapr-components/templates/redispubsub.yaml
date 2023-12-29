@@ -10,24 +10,6 @@ spec:
     value: service_account
   - name: projectId
     value: lumit-399702
-  - name: identityProjectId
-    value: lumit-399702
-  - name: privateKeyId
-    value: {{ .Values.gcpPubsub.privateKeyId }}
-  - name: clientEmail
-    value: {{ .Values.gcpPubsub.clientEmail }}
-  - name: clientId
-    value: {{ .Values.gcpPubsub.clientId }}
-  - name: authUri
-    value: https://accounts.google.com/o/oauth2/auth
-  - name: tokenUri
-    value: https://oauth2.googleapis.com/token
-  - name: authProviderX509CertUrl
-    value: https://www.googleapis.com/oauth2/v1/certs
-  - name: clientX509CertUrl
-    value: https://www.googleapis.com/robot/v1/metadata/x509/lumiterra.iam.gserviceaccount.com
-  - name: privateKey
-    value: {{ .Values.gcpPubsub.privateKey }}
   - name: disableEntityManagement
     value: "false"
   - name: enableMessageOrdering
