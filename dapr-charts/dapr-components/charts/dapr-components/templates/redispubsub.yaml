@@ -6,8 +6,6 @@ spec:
   type: pubsub.gcp.pubsub
   version: v1
   metadata:
-  - name: type
-    value: service_account
   - name: projectId
     value: lumit-399702
   - name: disableEntityManagement
