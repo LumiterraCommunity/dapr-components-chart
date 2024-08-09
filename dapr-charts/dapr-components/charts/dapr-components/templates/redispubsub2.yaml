@@ -12,3 +12,5 @@ spec:
     value: {{ .Values.pubsub2.redis.password }}
   - name: poolSize
     value: {{ .Values.pubsub2.redis.poolSize }}
+  - name: concurrency
+    value: {{ .Values.pubsub2.redis.concurrency }}
