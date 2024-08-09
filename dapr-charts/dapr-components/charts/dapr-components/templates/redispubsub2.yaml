@@ -1,14 +1,14 @@
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
-  name: pubsub
+  name: pubsub2
 spec:
   type: pubsub.redis
   version: v1
   metadata:
   - name: redisHost
-    value: {{ .Values.redis.host }}
+    value: {{ .Values.pubsub2.redis.host }}
   - name: redisPassword
-    value: {{ .Values.redis.password }}
+    value: {{ .Values.pubsub2.redis.password }}
   - name: poolSize
-    value: {{ .Values.redis.poolSize }}
+    value: {{ .Values.pubsub2.redis.poolSize }}
