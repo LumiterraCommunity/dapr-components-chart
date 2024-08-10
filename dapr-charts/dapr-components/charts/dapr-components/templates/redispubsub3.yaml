@@ -1,0 +1,16 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub3
+spec:
+  type: pubsub.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: {{ .Values.pubsub3.redis.host }}
+  - name: redisPassword
+    value: {{ .Values.pubsub3.redis.password }}
+  - name: poolSize
+    value: {{ .Values.pubsub3.redis.poolSize }}
+  - name: concurrency
+    value: {{ .Values.pubsub3.redis.concurrency }}
