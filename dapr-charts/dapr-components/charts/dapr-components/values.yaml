@@ -27,3 +27,20 @@ pubsub4:
     password:
     poolSize: 1000
     concurrency: 50
+
+
+stateStore:
+  lock:
+    redis: redis-headless:6379
+    password:
+    poolSize: 1000
+    concurrency: 50
+    db: 0
+    keyPrefix: 'lock'
+  business:
+    redis: redis-headless:6379
+    password:
+    poolSize: 1000
+    concurrency: 50
+    db: 0
+    keyPrefix:
